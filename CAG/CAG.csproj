@@ -1,0 +1,359 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationIcon>logo.ico</ApplicationIcon>
+    <Product>$(AssemblyName)</Product>
+    <PackageId>$(AssemblyName)</PackageId>
+    <AssemblyName>$(MSBuildProjectName) Studio</AssemblyName>
+    <StartupObject>CAG.Program</StartupObject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="CAGStudio.json" />
+    <None Remove="JS\Webview2Common.js" />
+    <None Remove="logo.ico" />
+    <None Remove="View\index.html" />
+    <None Remove="View\infinitown\assets\environments\envProbe\irradiance.json" />
+    <None Remove="View\infinitown\assets\main\Maps\AO\block10_merged_mat_ao.jpg" />
+    <None Remove="View\infinitown\assets\main\Maps\AO\block11_merged_mat_ao.jpg" />
+    <None Remove="View\infinitown\assets\main\Maps\AO\block1_ao.jpg" />
+    <None Remove="View\infinitown\assets\main\Maps\AO\block2_ao.jpg" />
+    <None Remove="View\infinitown\assets\main\Maps\AO\block3_merged_mat_ao.jpg" />
+    <None Remove="View\infinitown\assets\main\Maps\AO\block4_merged_mat_ao.jpg" />
+    <None Remove="View\infinitown\assets\main\Maps\AO\block5_merged_mat_ao.jpg" />
+    <None Remove="View\infinitown\assets\main\Maps\AO\block6_merged_mat_ao.jpg" />
+    <None Remove="View\infinitown\assets\main\Maps\AO\block7_merged_mat_ao.jpg" />
+    <None Remove="View\infinitown\assets\main\Maps\AO\block8_merged_mat_ao.jpg" />
+    <None Remove="View\infinitown\assets\main\Maps\AO\block9_merged_mat_ao.jpg" />
+    <None Remove="View\infinitown\assets\main\Maps\AO\park2_merged_mat_ao.jpg" />
+    <None Remove="View\infinitown\assets\main\Maps\AO\park_3_ao.jpg" />
+    <None Remove="View\infinitown\assets\main\Maps\Textures\Props_Props_01.jpg" />
+    <None Remove="View\infinitown\assets\main\Maps\Textures\Road.jpg" />
+    <None Remove="View\infinitown\assets\main\Maps\Textures\Vehicle_Ambulance.jpg" />
+    <None Remove="View\infinitown\assets\main\Maps\Textures\Vehicle_Bus_1.jpg" />
+    <None Remove="View\infinitown\assets\main\Maps\Textures\Vehicle_Bus_2.jpg" />
+    <None Remove="View\infinitown\assets\main\Maps\Textures\Vehicle_Bus_3.jpg" />
+    <None Remove="View\infinitown\assets\main\Maps\Textures\Vehicle_Car_1.jpg" />
+    <None Remove="View\infinitown\assets\main\Maps\Textures\Vehicle_Car_2.jpg" />
+    <None Remove="View\infinitown\assets\main\Maps\Textures\Vehicle_Car_3.jpg" />
+    <None Remove="View\infinitown\assets\main\Maps\Textures\Vehicle_Container_1.jpg" />
+    <None Remove="View\infinitown\assets\main\Maps\Textures\Vehicle_Container_2.jpg" />
+    <None Remove="View\infinitown\assets\main\Maps\Textures\Vehicle_Container_3.jpg" />
+    <None Remove="View\infinitown\assets\main\Maps\Textures\Vehicle_Pick up Truck_1.jpg" />
+    <None Remove="View\infinitown\assets\main\Maps\Textures\Vehicle_Pick up Truck_2.jpg" />
+    <None Remove="View\infinitown\assets\main\Maps\Textures\Vehicle_Pick up Truck_3.jpg" />
+    <None Remove="View\infinitown\assets\main\Maps\Textures\Vehicle_Police Car.jpg" />
+    <None Remove="View\infinitown\assets\main\Maps\Textures\Vehicle_SUV_1.jpg" />
+    <None Remove="View\infinitown\assets\main\Maps\Textures\Vehicle_SUV_2.jpg" />
+    <None Remove="View\infinitown\assets\main\Maps\Textures\Vehicle_SUV_3.jpg" />
+    <None Remove="View\infinitown\assets\main\Maps\Textures\Vehicle_Taxi.jpg" />
+    <None Remove="View\infinitown\assets\main\Maps\Textures\Vehicle_Truck_1.jpg" />
+    <None Remove="View\infinitown\assets\main\Maps\Textures\Vehicle_Truck_2.jpg" />
+    <None Remove="View\infinitown\assets\main\Maps\Textures\Vehicle_Truck_3.jpg" />
+    <None Remove="View\infinitown\assets\main\Materials\merged\block10_merged-mat-_MainTex-atlas0.jpg" />
+    <None Remove="View\infinitown\assets\main\Materials\merged\block11_merged-mat-_MainTex-atlas0.jpg" />
+    <None Remove="View\infinitown\assets\main\Materials\merged\block1_merged-mat-_MainTex-atlas0.jpg" />
+    <None Remove="View\infinitown\assets\main\Materials\merged\block2_merged-mat-_MainTex-atlas0.jpg" />
+    <None Remove="View\infinitown\assets\main\Materials\merged\block3_merged-mat-_MainTex-atlas0.jpg" />
+    <None Remove="View\infinitown\assets\main\Materials\merged\block4_merged-mat-_MainTex-atlas0.jpg" />
+    <None Remove="View\infinitown\assets\main\Materials\merged\block5_merged-mat-_MainTex-atlas0.jpg" />
+    <None Remove="View\infinitown\assets\main\Materials\merged\block6_merged-mat-_MainTex-atlas0.jpg" />
+    <None Remove="View\infinitown\assets\main\Materials\merged\block7_merged-mat-_MainTex-atlas0.jpg" />
+    <None Remove="View\infinitown\assets\main\Materials\merged\block8_merged-mat-_MainTex-atlas0.jpg" />
+    <None Remove="View\infinitown\assets\main\Materials\merged\block9_merged-mat-_MainTex-atlas0.jpg" />
+    <None Remove="View\infinitown\assets\main\Materials\merged\intersection_03_merged-mat-_MainTex-atlas0.jpg" />
+    <None Remove="View\infinitown\assets\main\Materials\merged\park2_merged-mat-_MainTex-atlas0.jpg" />
+    <None Remove="View\infinitown\assets\main\Materials\merged\park_merged-mat-_MainTex-atlas0.jpg" />
+    <None Remove="View\infinitown\assets\scenes\data\main.bin" />
+    <None Remove="View\infinitown\assets\scenes\main.json" />
+    <None Remove="View\infinitown\css\main.css" />
+    <None Remove="View\infinitown\index.html" />
+    <None Remove="View\infinitown\js\jquery.min.js" />
+    <None Remove="View\infinitown\js\lib\three.min.js" />
+    <None Remove="View\infinitown\js\main.min.js" />
+    <None Remove="View\infinitown\textures\normal.png" />
+    <None Remove="View\infinitown\textures\vignetting.png" />
+    <None Remove="View\infinitown\textures\white.png" />
+    <None Remove="View\static\css\app.27576c2f8c15100e3b88592fcaa454f0.css" />
+    <None Remove="View\static\css\app.27576c2f8c15100e3b88592fcaa454f0.css.map" />
+    <None Remove="View\static\js\0.3ef961527abb46dcb5b0.js" />
+    <None Remove="View\static\js\0.3ef961527abb46dcb5b0.js.map" />
+    <None Remove="View\static\js\1.a03131ca46ef8ba09339.js" />
+    <None Remove="View\static\js\1.a03131ca46ef8ba09339.js.map" />
+    <None Remove="View\static\js\2.671cde8d380311fad5c2.js" />
+    <None Remove="View\static\js\2.671cde8d380311fad5c2.js.map" />
+    <None Remove="View\static\js\app.f64879f7ff8cd53492dd.js" />
+    <None Remove="View\static\js\app.f64879f7ff8cd53492dd.js.map" />
+    <None Remove="View\static\js\manifest.85774db58cad86b9aebd.js" />
+    <None Remove="View\static\js\manifest.85774db58cad86b9aebd.js.map" />
+    <None Remove="View\static\js\vendor.efc8f2168741691ef8ed.js" />
+    <None Remove="View\static\js\vendor.efc8f2168741691ef8ed.js.map" />
+    <None Remove="View\static\login\login-bg.jpg" />
+    <None Remove="View\static\logo.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="CAGStudio.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JS\Webview2Common.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="logo.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\index.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\infinitown\assets\environments\envProbe\irradiance.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\infinitown\assets\main\Maps\AO\block10_merged_mat_ao.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\infinitown\assets\main\Maps\AO\block11_merged_mat_ao.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\infinitown\assets\main\Maps\AO\block1_ao.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\infinitown\assets\main\Maps\AO\block2_ao.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\infinitown\assets\main\Maps\AO\block3_merged_mat_ao.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\infinitown\assets\main\Maps\AO\block4_merged_mat_ao.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\infinitown\assets\main\Maps\AO\block5_merged_mat_ao.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\infinitown\assets\main\Maps\AO\block6_merged_mat_ao.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\infinitown\assets\main\Maps\AO\block7_merged_mat_ao.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\infinitown\assets\main\Maps\AO\block8_merged_mat_ao.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\infinitown\assets\main\Maps\AO\block9_merged_mat_ao.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\infinitown\assets\main\Maps\AO\park2_merged_mat_ao.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\infinitown\assets\main\Maps\AO\park_3_ao.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\infinitown\assets\main\Maps\Textures\Props_Props_01.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\infinitown\assets\main\Maps\Textures\Road.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\infinitown\assets\main\Maps\Textures\Vehicle_Ambulance.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\infinitown\assets\main\Maps\Textures\Vehicle_Bus_1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\infinitown\assets\main\Maps\Textures\Vehicle_Bus_2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\infinitown\assets\main\Maps\Textures\Vehicle_Bus_3.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\infinitown\assets\main\Maps\Textures\Vehicle_Car_1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\infinitown\assets\main\Maps\Textures\Vehicle_Car_2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\infinitown\assets\main\Maps\Textures\Vehicle_Car_3.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\infinitown\assets\main\Maps\Textures\Vehicle_Container_1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\infinitown\assets\main\Maps\Textures\Vehicle_Container_2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\infinitown\assets\main\Maps\Textures\Vehicle_Container_3.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\infinitown\assets\main\Maps\Textures\Vehicle_Pick up Truck_1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\infinitown\assets\main\Maps\Textures\Vehicle_Pick up Truck_2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\infinitown\assets\main\Maps\Textures\Vehicle_Pick up Truck_3.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\infinitown\assets\main\Maps\Textures\Vehicle_Police Car.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\infinitown\assets\main\Maps\Textures\Vehicle_SUV_1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\infinitown\assets\main\Maps\Textures\Vehicle_SUV_2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\infinitown\assets\main\Maps\Textures\Vehicle_SUV_3.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\infinitown\assets\main\Maps\Textures\Vehicle_Taxi.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\infinitown\assets\main\Maps\Textures\Vehicle_Truck_1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\infinitown\assets\main\Maps\Textures\Vehicle_Truck_2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\infinitown\assets\main\Maps\Textures\Vehicle_Truck_3.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\infinitown\assets\main\Materials\merged\block10_merged-mat-_MainTex-atlas0.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\infinitown\assets\main\Materials\merged\block11_merged-mat-_MainTex-atlas0.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\infinitown\assets\main\Materials\merged\block1_merged-mat-_MainTex-atlas0.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\infinitown\assets\main\Materials\merged\block2_merged-mat-_MainTex-atlas0.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\infinitown\assets\main\Materials\merged\block3_merged-mat-_MainTex-atlas0.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\infinitown\assets\main\Materials\merged\block4_merged-mat-_MainTex-atlas0.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\infinitown\assets\main\Materials\merged\block5_merged-mat-_MainTex-atlas0.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\infinitown\assets\main\Materials\merged\block6_merged-mat-_MainTex-atlas0.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\infinitown\assets\main\Materials\merged\block7_merged-mat-_MainTex-atlas0.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\infinitown\assets\main\Materials\merged\block8_merged-mat-_MainTex-atlas0.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\infinitown\assets\main\Materials\merged\block9_merged-mat-_MainTex-atlas0.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\infinitown\assets\main\Materials\merged\intersection_03_merged-mat-_MainTex-atlas0.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\infinitown\assets\main\Materials\merged\park2_merged-mat-_MainTex-atlas0.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\infinitown\assets\main\Materials\merged\park_merged-mat-_MainTex-atlas0.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\infinitown\assets\scenes\data\main.bin">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\infinitown\assets\scenes\main.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\infinitown\css\main.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\infinitown\index.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\infinitown\js\jquery.min.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\infinitown\js\lib\three.min.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\infinitown\js\main.min.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\infinitown\textures\normal.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\infinitown\textures\vignetting.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\infinitown\textures\white.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\static\css\app.27576c2f8c15100e3b88592fcaa454f0.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\static\css\app.27576c2f8c15100e3b88592fcaa454f0.css.map">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\static\js\0.3ef961527abb46dcb5b0.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\static\js\0.3ef961527abb46dcb5b0.js.map">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\static\js\1.a03131ca46ef8ba09339.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\static\js\1.a03131ca46ef8ba09339.js.map">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\static\js\2.671cde8d380311fad5c2.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\static\js\2.671cde8d380311fad5c2.js.map">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\static\js\app.f64879f7ff8cd53492dd.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\static\js\app.f64879f7ff8cd53492dd.js.map">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\static\js\manifest.85774db58cad86b9aebd.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\static\js\manifest.85774db58cad86b9aebd.js.map">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\static\js\vendor.efc8f2168741691ef8ed.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\static\js\vendor.efc8f2168741691ef8ed.js.map">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\static\login\login-bg.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\static\logo.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Jackletter.Microsoft.Extensions.Logging.File" Version="2.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="6.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Configuration" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.1150.38" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
+</Project>

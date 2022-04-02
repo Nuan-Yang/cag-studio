@@ -1,0 +1,22 @@
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    },
+    "File": {
+      "BaseDirectory": ".", //对于需要将日志输出到其他位置的非常有用
+      "IncludeScopes": true, //表示是否输出日志范围，默认输出
+      "InternalLogFile": "logs/log-#datetime{yyyy-MM-dd}#.log"
+    }
+  },
+  "StartUrl":"http://cag.studio.com/index.html",
+  "Dev": {
+    "Enable": true
+  },
+  //"StartUrl": "http://localhost:8080",
+  "Webview": {
+    "Language": "zh-cn",
+    "UserDataFolder": "WebviewCache"
+  }
+}
